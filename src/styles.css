@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+.card-block{
+    margin: 40px
+}
+
+.card {
+    border: 0px;
+    margin-bottom: 30px;
+    background-color: white
+}
+
+.table thead th, .table th {
+    border: 0px;
+}
+
+.container-fluid {
+    padding: 25px 30px;
+}
+
+.page-wrapper {
+    background: #f2f4f8;
+}
+
