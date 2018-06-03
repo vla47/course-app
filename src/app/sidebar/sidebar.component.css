@@ -34,7 +34,7 @@ body {
   
   .sidebar .nav-link {
     font-weight: 500;
-    color: #333;
+    color: #90a4ae;
   }
   
   .sidebar .nav-link .feather {
@@ -42,13 +42,8 @@ body {
     color: #999;
   }
   
-  .sidebar .nav-link.active {
-    color: #007bff;
-  }
-  
-  .sidebar .nav-link:hover .feather,
-  .sidebar .nav-link.active .feather {
-    color: inherit;
+  .sidebar .nav-link:hover{
+    color: #009efb;
   }
   
   .sidebar-heading {
