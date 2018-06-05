@@ -51,4 +51,9 @@ body {
     text-transform: uppercase;
   }
   
-  
+  .sidebar ul li a i {
+    
+    margin-right:  0;
+    display: inline;
+    font-size: 1.8em;
+}
