@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
+import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { LoginLayoutComponent } from './login-layout/login-layout.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { LoginComponent } from './login/login.component';
     MovieComponent,
     NavbarComponent,
     SidebarComponent,
-    LoginComponent
+    LoginComponent,
+    HomeLayoutComponent,
+    LoginLayoutComponent
   ],
   imports: [
     BrowserModule,
