@@ -14,6 +14,7 @@ import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
 import { RegisterComponent } from './register/register.component';
 import { TokenInterceptor } from './interceptor';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { TokenInterceptor } from './interceptor';
     LoginComponent,
     HomeLayoutComponent,
     LoginLayoutComponent,
-    RegisterComponent
+    RegisterComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

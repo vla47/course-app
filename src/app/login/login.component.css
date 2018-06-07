@@ -29,3 +29,11 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+form .message {
+  margin: 15px 0 0;
+  font-size: 12px;
+}
+form .message a {
+  text-decoration: none;
+}
