@@ -5,16 +5,16 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-    selector: 'app-movies',
-    templateUrl: './movies.component.html',
-    styleUrls: ['./movies.component.css']
+    selector: 'app-courses',
+    templateUrl: './courses.component.html',
+    styleUrls: ['./courses.component.css']
 })
-export class MoviesComponent implements OnInit {
+export class CoursesComponent implements OnInit {
 
-    public movies: any;
+    public courses: any;
 
     public constructor(private http: HttpClient, private router: Router, private location: Location) {
-        this.movies = [];
+        this.courses = [];
     }
 
     public ngOnInit() {
@@ -25,25 +25,25 @@ export class MoviesComponent implements OnInit {
     }
 
     private refresh() {
-        this.http.get('http://localhost:8000/movies')
+        this.http.get('http://localhost:8000/courses')
             .subscribe(result => {
-                this.movies = result;
+                this.courses = result;
             });
     }
 
     public search(event: any) {
-        let url = 'http://localhost:8000/movies';
+        let url = 'http://localhost:8000/courses';
         if (event.target.value) {
             url = 'http://localhost:8000/search/' + event.target.value;
         }
         this.http.get(url)
             .subscribe(result => {
-                this.movies = result;
+                this.courses = result;
             });
     }
 
     public create() {
-        this.router.navigate(['movie']);
+        this.router.navigate(['course']);
     }
 
 }

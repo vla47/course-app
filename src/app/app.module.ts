@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AvailableRoutes } from './app.routing';
-import { MovieComponent } from './movie/movie.component';
-import { MoviesComponent } from './movies/movies.component';
+import { CourseComponent } from './course/course.component';
+import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -12,18 +12,20 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoviesComponent,
-    MovieComponent,
+    CourseComponent,
+    CoursesComponent,
     NavbarComponent,
     SidebarComponent,
     LoginComponent,
     HomeLayoutComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

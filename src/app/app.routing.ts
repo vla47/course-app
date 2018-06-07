@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-
-
-import { MoviesComponent } from './movies/movies.component';
-import { MovieComponent } from './movie/movie.component';
+import { CourseComponent } from './course/course.component';
+import { CoursesComponent } from './courses/courses.component';
 import { LoginComponent } from './login/login.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
+import { RegisterComponent } from './register/register.component';
 
 export const AvailableRoutes: any = [
   {
@@ -15,11 +14,11 @@ export const AvailableRoutes: any = [
     children: [
       {
         path: '',
-        component: MoviesComponent
+        component: CoursesComponent
       },
       {
-        path: 'movie',
-        component: MovieComponent
+        path: 'course',
+        component: CourseComponent
       },
     ]
   },
@@ -30,6 +29,10 @@ export const AvailableRoutes: any = [
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
       },
     ]
   },
