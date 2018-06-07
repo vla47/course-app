@@ -25,16 +25,16 @@ export class CoursesComponent implements OnInit {
     }
 
     private refresh() {
-        this.http.get('http://localhost:8000/courses')
+        this.http.get('http://localhost:3000/courses')
             .subscribe(result => {
                 this.courses = result;
             });
     }
 
     public search(event: any) {
-        let url = 'http://localhost:8000/courses';
+        let url = 'http://localhost:3000/courses';
         if (event.target.value) {
-            url = 'http://localhost:8000/search/' + event.target.value;
+            url = 'http://localhost:3000/search/' + event.target.value;
         }
         this.http.get(url)
             .subscribe(result => {

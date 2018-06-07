@@ -22,11 +22,11 @@ export class LoginComponent implements OnInit {
 
   public login() {
     if (this.cred.email && this.cred.password) {
-      this.http.post('http://localhost:3000/login', this.cred).subscribe(res => {
+      this.http.post('http://localhost:3000/login', this.cred).subscribe((res: any) => {
         if (res) {
           // store username and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('currentUser', JSON.stringify({ email: this.cred.email, token: res }));
-          this.router.navigate(['/movies'], { 'queryParams': res });
+          localStorage.setItem('currentUser', JSON.stringify({ email: this.cred.email, token: res.sid }));
+          this.router.navigate(['/movies']);
         }
       });
     }

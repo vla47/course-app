@@ -24,7 +24,8 @@ export class CourseComponent implements OnInit {
 
   public save() {
       if (this.course.name) {
-          this.http.post('http://localhost:8000/courses', JSON.stringify(this.course))
+          console.log(this.course)
+          this.http.post('http://localhost:3000/courses', this.course)
               .subscribe(result => {
                   this.location.back();
               }, err => {
