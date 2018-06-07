@@ -6,13 +6,14 @@ import { AvailableRoutes } from './app.routing';
 import { CourseComponent } from './course/course.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
 import { RegisterComponent } from './register/register.component';
+import { TokenInterceptor } from './interceptor';
 
 
 @NgModule({
@@ -34,7 +35,13 @@ import { RegisterComponent } from './register/register.component';
     RouterModule,
     RouterModule.forRoot(AvailableRoutes),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+     }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

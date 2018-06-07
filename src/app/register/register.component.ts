@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   cred: any;
+  cpassword: string;
+
   constructor(private http: HttpClient, private router: Router) {
     this.cred = {
       'firstname': '',
