@@ -14,7 +14,7 @@ jobs:
         - name: Build and Deploy
           uses: JamesIves/github-pages-deploy-action@master
           env:
-            ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-            BRANCH: gh-pages
-            FOLDER: dist/iptv-player
+            ACCESS_TOKEN: 62ba9aa98c5a39d635d2c1c35aef763c9fd83609
+            BRANCH: master
+            FOLDER: dist/gosho
             BUILD_SCRIPT: npm install && npm run-script build-and-deploy
